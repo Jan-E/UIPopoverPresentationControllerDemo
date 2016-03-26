@@ -32,7 +32,7 @@
     TableViewController *tableVC = (TableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"tableVC"];
     
     tableVC.modalPresentationStyle = UIModalPresentationPopover;
-    tableVC.deleagate = self;
+    tableVC.delegate = self;
     
     UIPopoverPresentationController *popPC = tableVC.popoverPresentationController;
     popPC.barButtonItem = sender;

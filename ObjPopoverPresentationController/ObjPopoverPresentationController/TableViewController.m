@@ -22,12 +22,12 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.names = @[@"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise"];
+    self.names = @[@"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,9 +62,9 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (self.deleagate && [self.deleagate respondsToSelector:@selector(updateViewWithSelectedData:)]) {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(updateViewWithSelectedData:)]) {
         
-        [self.deleagate updateViewWithSelectedData:self.names[indexPath.row]];
+        [self.delegate updateViewWithSelectedData:self.names[indexPath.row]];
     }
 }
 
