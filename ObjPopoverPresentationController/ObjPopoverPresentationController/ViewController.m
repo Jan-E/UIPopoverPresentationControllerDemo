@@ -34,6 +34,10 @@
     
     tableVC.modalPresentationStyle = UIModalPresentationPopover;
     tableVC.delegateid = self;
+
+    tableVC.fieldValues = [[NSMutableArray alloc] init];
+    [tableVC.fieldValues addObject:[NSString stringWithFormat:@"ASU"]];
+    [tableVC.fieldValues addObject:[NSString stringWithFormat:@"PMTO.nl"]];
     
     UIPopoverPresentationController *popPC = tableVC.popoverPresentationController;
     popPC.barButtonItem = sender;
@@ -85,6 +89,32 @@
         tableVC.modalPresentationStyle = UIModalPresentationPopover;
         tableVC.delegateid = self;
         
+        tableVC.fieldValues = [[NSMutableArray alloc] init];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Alpha"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Beta"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Gamma"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Delta"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Epsilon"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Zeta"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Eta"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Theta"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Iota"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Kappa"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Lambda"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Mu"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Nu"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Xi"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Omicron"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Pi"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Rho"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Sigma"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Tau"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Upsilon"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Phi"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Chi"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Psi"]];
+        [tableVC.fieldValues addObject:[NSString stringWithFormat:@"Omega"]];
+
         UIPopoverPresentationController *popPC = tableVC.popoverPresentationController;
         //popPC.barButtonItem = sender;
         popPC.permittedArrowDirections = UIPopoverArrowDirectionAny;

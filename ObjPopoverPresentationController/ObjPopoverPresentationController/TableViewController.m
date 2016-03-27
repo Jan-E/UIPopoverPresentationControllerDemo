@@ -12,7 +12,6 @@
 #define kCellWithIdentifier @"cell"
 
 @interface TableViewController ()
-@property (nonatomic, copy) NSArray *names;
 
 @end
 
@@ -22,12 +21,12 @@
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.names = @[@"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise"];
+//    self.fieldValues = @[@"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise"];
 
     NSLog(@"self.delegateid %@", self.delegateid);
 }
@@ -46,7 +45,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return self.names.count;
+    return self.fieldValues.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,7 +54,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellWithIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = self.names[indexPath.row];
+    cell.textLabel.text = self.fieldValues[indexPath.row];
     
     return cell;
 }
@@ -63,10 +62,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSLog(@"Selected %@",self.names[indexPath.row]);
+    NSLog(@"Selected %@",self.fieldValues[indexPath.row]);
     if (self.delegateid && [self.delegateid respondsToSelector:@selector(updateViewWithSelectedData:)]) {
         NSLog(@"self.delegateid %@", self.delegateid);
-        [self.delegateid updateViewWithSelectedData:self.names[indexPath.row]];
+        [self.delegateid updateViewWithSelectedData:self.fieldValues[indexPath.row]];
     }
 }
 

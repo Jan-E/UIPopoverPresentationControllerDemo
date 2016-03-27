@@ -17,6 +17,6 @@
 @interface TableViewController : UITableViewController
 
 @property (nonatomic, assign) id<UpdatePresentingViewControllerWithData> delegateid;
-@property (nonatomic, assign) id<UpdatePresentingViewControllerWithData> popoverid;
+@property (nonatomic, retain) NSMutableArray *fieldValues;
 
 @end
