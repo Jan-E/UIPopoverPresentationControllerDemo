@@ -28,6 +28,8 @@
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.names = @[@"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise", @"John", @"Mike", @"Sarah", @"Karen", @"Kai", @"Brad", @"Louise"];
+
+    NSLog(@"self.delegateid %@", self.delegateid);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,10 +63,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (self.delegate && [self.delegate respondsToSelector:@selector(updateViewWithSelectedData:)]) {
-        
-        [self.delegate updateViewWithSelectedData:self.names[indexPath.row]];
+    NSLog(@"Selected %@",self.names[indexPath.row]);
+    if (self.delegateid && [self.delegateid respondsToSelector:@selector(updateViewWithSelectedData:)]) {
+        NSLog(@"self.delegateid %@", self.delegateid);
+        [self.delegateid updateViewWithSelectedData:self.names[indexPath.row]];
     }
 }
 

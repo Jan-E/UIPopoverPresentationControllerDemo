@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 
@@ -32,7 +33,7 @@
     TableViewController *tableVC = (TableViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"tableVC"];
     
     tableVC.modalPresentationStyle = UIModalPresentationPopover;
-    tableVC.delegate = self;
+    tableVC.delegateid = self;
     
     UIPopoverPresentationController *popPC = tableVC.popoverPresentationController;
     popPC.barButtonItem = sender;
@@ -71,6 +72,26 @@
     NSLog(@"Delegate called");
     self.lblSelectedInformation.text = selectedString;
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"segue destinationViewController %@",[segue destinationViewController]);
+    if ([[segue destinationViewController] isKindOfClass:[TableViewController class]])
+    {
+        TableViewController *tableVC = segue.destinationViewController;
+        tableVC.modalPresentationStyle = UIModalPresentationPopover;
+        tableVC.delegateid = self;
+        
+        UIPopoverPresentationController *popPC = tableVC.popoverPresentationController;
+        //popPC.barButtonItem = sender;
+        popPC.permittedArrowDirections = UIPopoverArrowDirectionAny;
+        popPC.delegate = self;
+
+        self.popSegue = (UIStoryboardPopoverSegue*)segue;
+    }
 }
 
 @end

@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController <UIPopoverPresentationControllerDelegate, UpdatePresentingViewControllerWithData>
 
+@property (strong, nonatomic) UIStoryboardPopoverSegue* popSegue;
 
 @end
 

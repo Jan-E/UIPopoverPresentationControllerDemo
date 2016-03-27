@@ -25,10 +25,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whd-ld-0CB">
-                                <rect key="frame" x="534" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="460" y="285" width="120" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="PopTableView"/>
                                 <connections>
-                                    <segue destination="hwB-QV-Kez" kind="popoverPresentation" popoverAnchorView="whd-ld-0CB" id="rKc-yg-pK3">
+                                    <segue destination="hwB-QV-Kez" kind="popoverPresentation" popoverAnchorView="whd-ld-0CB" id="WJP-FD-rLu">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -36,10 +37,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="whd-ld-0CB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="85a-9W-M7d"/>
+                            <constraint firstItem="whd-ld-0CB" firstAttribute="centerY" secondItem="H5y-86-WuI" secondAttribute="centerY" id="ITT-Be-DkT"/>
                             <constraint firstItem="H5y-86-WuI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K7q-7F-ZXw"/>
-                            <constraint firstItem="whd-ld-0CB" firstAttribute="baseline" secondItem="H5y-86-WuI" secondAttribute="baseline" id="T71-VN-Bqy"/>
                             <constraint firstItem="H5y-86-WuI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="d1B-tj-LnZ"/>
+                            <constraint firstItem="whd-ld-0CB" firstAttribute="leading" secondItem="H5y-86-WuI" secondAttribute="trailing" constant="27" id="iTp-8a-uAU"/>
+                            <constraint firstItem="whd-ld-0CB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="221" id="nuR-hl-40B"/>
+                            <constraint firstItem="whd-ld-0CB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="u1J-wg-WA2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FDF-Ag-atL">
@@ -77,7 +80,6 @@
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="hwB-QV-Kez" id="36u-Kn-I2X"/>
-                            <outlet property="delegate" destination="hwB-QV-Kez" id="kIo-8O-e8u"/>
                         </connections>
                     </tableView>
                 </tableViewController>

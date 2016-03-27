@@ -418,10 +418,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ObjPopoverPresentationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaiwindle.ObjPopoverPresentationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -430,10 +431,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ObjPopoverPresentationController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaiwindle.ObjPopoverPresentationController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -504,6 +506,7 @@
 				2AC142C11BDE2E1400FF6CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AC142C21BDE2E1400FF6CEF /* Build configuration list for PBXNativeTarget "ObjPopoverPresentationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +515,7 @@
 				2AC142C41BDE2E1400FF6CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AC142C51BDE2E1400FF6CEF /* Build configuration list for PBXNativeTarget "ObjPopoverPresentationControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +524,7 @@
 				2AC142C71BDE2E1400FF6CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,6 +16,7 @@
 
 @interface TableViewController : UITableViewController
 
-@property (nonatomic, assign) id<UpdatePresentingViewControllerWithData> delegate;
+@property (nonatomic, assign) id<UpdatePresentingViewControllerWithData> delegateid;
+@property (nonatomic, assign) id<UpdatePresentingViewControllerWithData> popoverid;
 
 @end
